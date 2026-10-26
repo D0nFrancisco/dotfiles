@@ -1,0 +1,142 @@
+/* ─────────── SwayNC · Dark Minimal ─────────── */
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 12px;
+}
+
+.blank-window,
+.floating-notifications {
+    background: transparent;
+}
+
+/* ── Notificaciones ── */
+.notification-row {
+    outline: none;
+    background: transparent;
+}
+.notification-row:focus,
+.notification-row:hover {
+    background: transparent;
+}
+
+.notification {
+    background: rgba(17, 17, 19, 0.96);
+    border: 1px solid #232327;
+    border-radius: 8px;
+    margin: 4px 8px;
+    padding: 4px;
+    box-shadow: none;
+}
+
+.notification.critical {
+    border-color: #a15c5c;
+}
+
+.notification-default-action {
+    border-radius: 8px;
+    padding: 6px;
+}
+.notification-default-action:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.summary { color: #d6d3cd; font-weight: 600; }
+.time    { color: #6e6c69; font-size: 10px; }
+.body    { color: #a8a5a0; }
+
+.notification-action {
+    border: none;
+    border-radius: 6px;
+    margin: 4px;
+    background: #18181b;
+    color: #d6d3cd;
+}
+.notification-action:hover {
+    background: #232327;
+}
+
+.close-button {
+    background: transparent;
+    color: #6e6c69;
+    border-radius: 6px;
+    min-width: 18px;
+    min-height: 18px;
+    margin: 6px;
+    padding: 0;
+    box-shadow: none;
+}
+.close-button:hover {
+    background: #232327;
+    color: #d6d3cd;
+}
+
+/* ── Centro de control ── */
+.control-center {
+    background: rgba(10, 10, 11, 0.96);
+    border: 1px solid #232327;
+    border-radius: 8px;
+    padding: 10px;
+    color: #d6d3cd;
+}
+
+.control-center-list,
+.control-center-list-placeholder {
+    background: transparent;
+}
+
+.widget-title > label {
+    color: #d6d3cd;
+    font-size: 13px;
+    font-weight: 600;
+}
+.widget-title > button {
+    background: #18181b;
+    color: #a8a5a0;
+    border: none;
+    border-radius: 6px;
+    padding: 2px 8px;
+}
+.widget-title > button:hover {
+    background: #232327;
+    color: #d9d4c7;
+}
+
+.widget-dnd {
+    color: #a8a5a0;
+    margin: 4px 0;
+}
+.widget-dnd > switch {
+    background: #18181b;
+    border: 1px solid #232327;
+    border-radius: 999px;
+}
+.widget-dnd > switch:checked {
+    background: #d9d4c7;
+}
+.widget-dnd > switch slider {
+    background: #6e6c69;
+    border-radius: 999px;
+}
+.widget-dnd > switch:checked slider {
+    background: #0a0a0b;
+}
+
+.widget-mpris-player {
+    background: #111113;
+    border: 1px solid #1f1f22;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 6px 0;
+}
+.widget-mpris-album-art { border-radius: 6px; }
+.widget-mpris-title     { color: #d6d3cd; font-weight: 600; }
+.widget-mpris-subtitle  { color: #6e6c69; }
+.widget-mpris button {
+    color: #a8a5a0;
+    border-radius: 6px;
+}
+.widget-mpris button:hover {
+    background: #18181b;
+    color: #d9d4c7;
+}

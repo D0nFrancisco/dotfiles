@@ -1,0 +1,101 @@
+/* ─────────── Waybar · Dark Minimal v4 ─────────── */
+
+@define-color bg     #0a0a0b;
+@define-color bg1    #111113;
+@define-color bg2    #18181b;
+@define-color bg3    #232327;
+@define-color fg     #d6d3cd;
+@define-color muted  #6e6c69;
+@define-color accent #d9d4c7;
+@define-color alert  #a15c5c;
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+/* Fondo traslúcido: el blur lo pone Hyprland (layer rule waybar) */
+window#waybar {
+    background: alpha(@bg, 0.82);
+    color: @fg;
+    border-bottom: 1px solid alpha(@bg3, 0.9);
+}
+
+/* ── Workspaces: línea de 1 px bajo el activo ── */
+#workspaces {
+    margin-left: 6px;
+}
+
+#workspaces button {
+    color: @muted;
+    background: transparent;
+    padding: 0 10px;
+    box-shadow: inset 0 0 0 0 transparent;
+    transition: color 260ms cubic-bezier(0.22, 1, 0.36, 1),
+                background-color 260ms cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#workspaces button.empty {
+    color: alpha(@muted, 0.45);
+}
+
+#workspaces button.active {
+    color: @accent;
+    font-weight: 700;
+    box-shadow: inset 0 -1px 0 0 @accent;
+}
+
+#workspaces button.urgent {
+    color: @alert;
+    box-shadow: inset 0 -1px 0 0 @alert;
+}
+
+#workspaces button:hover {
+    color: @fg;
+    background: alpha(@bg3, 0.6);
+}
+
+/* ── Reloj ── */
+#clock {
+    color: @fg;
+    padding: 0 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    transition: background-color 220ms ease;
+}
+
+#clock:hover {
+    background: alpha(@bg3, 0.6);
+}
+
+/* ── Botón del panel (volumen · red · avisos) ── */
+#custom-panel {
+    color: @fg;
+    padding: 0 14px;
+    margin-right: 2px;
+    transition: background-color 220ms ease, box-shadow 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#custom-panel:hover {
+    background: alpha(@bg3, 0.6);
+    box-shadow: inset 0 -1px 0 0 @accent;
+}
+
+/* ── Tooltips ── */
+tooltip {
+    background: alpha(@bg1, 0.96);
+    border: 1px solid @bg3;
+    border-radius: 8px;
+}
+
+tooltip label {
+    color: @fg;
+    padding: 4px 6px;
+}

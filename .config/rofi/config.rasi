@@ -1,0 +1,23 @@
+/* ─────────── Rofi 2.x · Dark Minimal v3 ─────────── */
+
+configuration {
+    modi:                "drun,run,window";
+    show-icons:          true;
+    icon-theme:          "Papirus-Dark";
+    font:                "JetBrainsMono Nerd Font 11";
+    drun-display-format: "{name}";
+    display-drun:        "󰍉";
+    display-run:         "󰆍";
+    display-window:      "󰖯";
+    window-format:       "{c}  ·  {t}";
+    matching:            "fuzzy";
+    sort:                true;
+    sorting-method:      "fzf";
+    disable-history:     false;
+    hover-select:        true;
+    me-select-entry:     "";
+    me-accept-entry:     "MousePrimary";
+    kb-cancel:           "Escape,Control+g,Control+bracketleft";
+}
+
+@theme "~/.config/rofi/minimal.rasi"

@@ -1,0 +1,65 @@
+/* ─────────────────────────────────────────────────────────────
+   GTK 3 / GTK 4 · colores Dark Minimal sobre el tema adw-gtk3-dark
+   (pavucontrol, nm-connection-editor, blueman, apps libadwaita…)
+   ───────────────────────────────────────────────────────────── */
+
+/* Acento único: blanco cálido */
+@define-color accent_color          #d9d4c7;
+@define-color accent_bg_color       #d9d4c7;
+@define-color accent_fg_color       #0a0a0b;
+
+/* Estados (tonos apagados de la paleta) */
+@define-color destructive_color     #a15c5c;
+@define-color destructive_bg_color  #a15c5c;
+@define-color destructive_fg_color  #d6d3cd;
+@define-color error_color           #a15c5c;
+@define-color error_bg_color        #a15c5c;
+@define-color error_fg_color        #d6d3cd;
+@define-color success_color         #7f8a72;
+@define-color success_bg_color      #7f8a72;
+@define-color success_fg_color      #0a0a0b;
+@define-color warning_color         #a89a7c;
+@define-color warning_bg_color      #a89a7c;
+@define-color warning_fg_color      #0a0a0b;
+
+/* Ventanas y vistas */
+@define-color window_bg_color       #111113;
+@define-color window_fg_color       #d6d3cd;
+@define-color view_bg_color         #0a0a0b;
+@define-color view_fg_color         #d6d3cd;
+
+/* Barra de título */
+@define-color headerbar_bg_color        #0a0a0b;
+@define-color headerbar_fg_color        #d6d3cd;
+@define-color headerbar_border_color    #232327;
+@define-color headerbar_backdrop_color  #0a0a0b;
+@define-color headerbar_shade_color     rgba(0, 0, 0, 0.36);
+@define-color headerbar_darker_shade_color rgba(0, 0, 0, 0.9);
+
+/* Barras laterales */
+@define-color sidebar_bg_color          #0a0a0b;
+@define-color sidebar_fg_color          #d6d3cd;
+@define-color sidebar_backdrop_color    #0a0a0b;
+@define-color sidebar_border_color      #232327;
+@define-color sidebar_shade_color       rgba(0, 0, 0, 0.36);
+@define-color secondary_sidebar_bg_color        #111113;
+@define-color secondary_sidebar_fg_color        #d6d3cd;
+@define-color secondary_sidebar_backdrop_color  #111113;
+@define-color secondary_sidebar_border_color    #232327;
+@define-color secondary_sidebar_shade_color     rgba(0, 0, 0, 0.36);
+
+/* Tarjetas, diálogos y menús */
+@define-color card_bg_color         #18181b;
+@define-color card_fg_color         #d6d3cd;
+@define-color card_shade_color      rgba(0, 0, 0, 0.36);
+@define-color dialog_bg_color       #111113;
+@define-color dialog_fg_color       #d6d3cd;
+@define-color popover_bg_color      #18181b;
+@define-color popover_fg_color      #d6d3cd;
+@define-color popover_shade_color   rgba(0, 0, 0, 0.36);
+@define-color thumbnail_bg_color    #18181b;
+@define-color thumbnail_fg_color    #d6d3cd;
+
+/* Sombras y bordes */
+@define-color shade_color               rgba(0, 0, 0, 0.36);
+@define-color scrollbar_outline_color   rgba(0, 0, 0, 0.5);

@@ -1,0 +1,31 @@
+/* ─────────── wlogout · Dark Minimal ───────────
+   Sin imágenes PNG: los íconos son glifos de la Nerd Font,
+   así no se deforman ni se pixelan al escalar. */
+
+* {
+    background-image: none;
+    box-shadow: none;
+    font-family: "JetBrainsMono Nerd Font";
+}
+
+window {
+    background-color: rgba(10, 10, 11, 0.82);
+}
+
+button {
+    color: #6e6c69;
+    font-size: 34px;
+    background-color: #111113;
+    border: 1px solid #232327;
+    border-radius: 8px;
+    margin: 6px;
+    outline-style: none;
+    transition: color 120ms ease, border-color 120ms ease;
+}
+
+button:focus,
+button:hover {
+    color: #d9d4c7;
+    background-color: #18181b;
+    border-color: #d9d4c7;
+}

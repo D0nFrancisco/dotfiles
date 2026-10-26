@@ -1,0 +1,43 @@
+// ─────────── Waybar · Dark Minimal v4 ───────────
+// Derecha: un solo botón (volumen · red · avisos) que abre el panel.
+{
+    "layer": "top",
+    "position": "top",
+    "height": 28,
+    "spacing": 0,
+    "reload_style_on_change": true,
+
+    "modules-left":   ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right":  ["custom/panel"],
+
+    // El scroll pasa por dm-ws.sh: funciona con config hyprlang y con Lua
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "persistent-workspaces": { "*": 5 },
+        "sort-by-number": true,
+        "on-click": "activate",
+        "on-scroll-up": "~/.config/hypr/scripts/dm-ws.sh e-1",
+        "on-scroll-down": "~/.config/hypr/scripts/dm-ws.sh e+1"
+    },
+
+    // Clic en la hora: panel en la pestaña Calendario
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip": false,
+        "on-click": "qs -c dm-panel ipc call panel show calendar"
+    },
+
+    "custom/panel": {
+        "exec": "~/.config/quickshell/dm-panel/scripts/dm-barstatus.sh",
+        "return-type": "json",
+        "interval": 2,
+        "escape": false,
+        "tooltip": false,
+        "on-click": "qs -c dm-panel ipc call panel toggle",
+        "on-click-right": "swaync-client -t -sw",
+        "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+    }
+}
